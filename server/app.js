@@ -49,7 +49,7 @@ async function add( tit , con ) {
 }
 
 function del( tit , con ) { 
-model.deleteMany({ title: tit , content: con  }).then(function(){
+model.deleteOne({ title: tit , content: con  }).then(function(){
     return 1 ;
 
 }).catch(function(error){
